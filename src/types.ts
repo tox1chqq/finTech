@@ -1,1 +1,4 @@
-export const t = 'f'
+export interface ICurrency {
+  name: string;
+  value: number;
+}

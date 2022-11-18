@@ -1,20 +1,19 @@
-import React from 'react';
-import './App.css';
-import {Route, Routes} from "react-router-dom";
-import {Convert} from "./pages/Convert";
-import {CurrencyList} from "./pages/CurrencyList";
-import {Layout} from "./components/Layout";
-import CurrencyAPI from './services/index'
+import React from "react";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { Convert } from "./pages/Convert";
+import { CurrencyList } from "./pages/CurrencyList";
+import { Layout } from "./components/Layout";
 
 function App() {
-    CurrencyAPI.registerUser()
-
-  return <Layout>
+  return (
+    <Layout>
       <Routes>
-          <Route path='/'  element={<Convert/>}/>
-          <Route path='/list' element={<CurrencyList/>}/>
+        <Route path="/" element={<Convert />} />
+        <Route path="/list" element={<CurrencyList />} />
       </Routes>
-  </Layout>
+    </Layout>
+  );
 }
 
 export default App;

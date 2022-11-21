@@ -1,9 +1,7 @@
 import React from "react";
-import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { Convert } from "./pages/Convert";
-import { CurrencyList } from "./pages/CurrencyList";
-import { Layout } from "./components/Layout";
+import { Convert, CurrencyList } from "./pages";
+import { Layout } from "./components";
 
 function App() {
   return (

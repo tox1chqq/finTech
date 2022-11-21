@@ -2,6 +2,7 @@ import React from "react";
 import { observer } from "mobx-react";
 import { converterStore } from "../story/converterStore";
 import { useNavigate } from "react-router-dom";
+import { CurrencyInput } from "../components";
 
 export const Convert = observer(() => {
   const navigate = useNavigate();
@@ -27,24 +28,18 @@ export const Convert = observer(() => {
     <>
       <div className="flex justify-evenly items-center gap-5 pt-40">
         <div className="flex justify-center items-center gap-5 flex-col">
-          <h3>Current valute</h3>
-          <h4>{currentCurrency}</h4>
-          <input
-            className="border-black border border-1  border-t-0 border-r-0 border-l-0  outline-0"
-            value={currentCurrencyCount}
-            onChange={(e) => handleSetCurrentCount(e.target.value)}
+          <CurrencyInput
+            currencyName={currentCurrency}
+            inputValue={currentCurrencyCount}
+            handleChange={handleSetCurrentCount}
           />
         </div>
         <hr className="border-indigo-500 border-t-[150px] w-[1px]" />
-        <div className="flex justify-center items-center gap-5 flex-col">
-          <h3>Selected valute</h3>
-          <h4>{secondaryCurrency}</h4>
-          <input
-            disabled
-            className="border-black border border-1  border-t-0 border-r-0 border-l-0  outline-0 bg-transparent"
-            value={totalAmount}
-          />
-        </div>
+        <CurrencyInput
+          currencyName={secondaryCurrency}
+          inputValue={totalAmount}
+          isDisabled
+        />
       </div>
       <div className="flex justify-center p-20">
         <button

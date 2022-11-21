@@ -18,7 +18,7 @@ class ConverterStore {
   currencyList: ICurrency[] = [];
 
   get totalAmount() {
-    return (this.currentCurrencyCount * this.currencyRatio).toFixed(1);
+    return +(this.currentCurrencyCount * this.currencyRatio).toFixed(1);
   }
 
   setCurrentCurrency = (value: string) => {

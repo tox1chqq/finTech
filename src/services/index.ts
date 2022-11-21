@@ -1,4 +1,4 @@
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 
 const link = "https://api.exchangerate.host/latest";
 
@@ -18,9 +18,9 @@ class CurrencyAPI {
       const response = await this.getInstance().get(`?base=${currency}`);
       return response.data;
     } catch (e) {
-        console.log(e);
-      }
+      console.log(e);
     }
-  }
+  };
+}
 
 export const currencyAPI = new CurrencyAPI();

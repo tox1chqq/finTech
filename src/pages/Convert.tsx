@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react";
-import { converterStore } from "../story/converterStore";
+import { converterStore } from "../store/converterStore";
 import { useNavigate } from "react-router-dom";
 import { CurrencyInput } from "../components";
 
@@ -44,7 +44,7 @@ export const Convert = observer(() => {
       <div className="flex justify-center p-20">
         <button
           className="bg-gray-200 p-5 rounded-md"
-          onClick={() => handleSelectCurrency()}
+          onClick={handleSelectCurrency}
         >
           Pick this currency
         </button>

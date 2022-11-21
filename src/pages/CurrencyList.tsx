@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { converterStore } from "../story/converterStore";
+import { converterStore } from "../store/converterStore";
 import favorite from "../assests/favorite.png";
 import select from "../assests/select.png";
 import remove from "../assests/delete.png";
